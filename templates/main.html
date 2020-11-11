@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Meningitis Location Prediction in Nigeria</title>
+
+    <!-- Icons font CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/datepicker/daterangepicker.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title"> MENINGITIS OUTBREAK PREDICTION IN NIGERIA </h2>
+                    <h5 class="title" >To help the government curb the outbreak of Meningitis in Nigeria, we developed this AI model that accurately predicts whether an infected person is present in any state and locality (Future updates to the model will cover all states and locality in Nigeria). You first select the state where you want to confirm the presence of an infected person then input the following details; Gender, Month of Infection, Age, Adult Group, Meningitis Serotype Group and Patient's Life Status </h5>
+                    <form method="POST">
+
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="state" required>
+                                    <option disabled="disabled" selected="selected" value="">Reference State</option>
+                                    <option >Ogun_Rural</option>
+                                    <option >Ogun_Urban</option>
+                                    <option >FCT_Rural</option>
+                                    <option >FCT_Urban</option>
+                                    <option >Kaduna_Rural</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="gender_male" required>
+                                    <option disabled="disabled" selected="selected" value="">Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div align="center">
+                                <br> Month:
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="january" required>
+                                            <option disabled="disabled" value="" selected="selected">January</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="february" required>
+                                            <option disabled="disabled" value="" selected="selected">February</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="march" required>
+                                            <option disabled="disabled" value="" selected="selected">March</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="april" required>
+                                            <option disabled="disabled" value="" selected="selected">April</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="may" required>
+                                            <option disabled="disabled" value="" selected="selected">May</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="june" required>
+                                            <option disabled="disabled" value="" selected="selected">June</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="july" required>
+                                            <option disabled="disabled" value="" selected="selected">July</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="august" required>
+                                            <option disabled="disabled" value="" selected="selected">August</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="september" required>
+                                            <option disabled="disabled" value="" selected="selected">September</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="october" required>
+                                            <option disabled="disabled" value="" selected="selected">October</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="november" required>
+                                            <option disabled="disabled" value="" selected="selected">November</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="december" required>
+                                            <option disabled="disabled" value="" selected="selected">December</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Age" name="age" required>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="adult_group" required>
+                                    <option disabled="disabled" value="" selected="selected">Adult Group</option>
+                                    <option>Adult</option>
+                                    <option>Child</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div align="center">
+                                <br> Serotype:
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="NmA" required>
+                                            <option disabled="disabled" value="" selected="selected">NmA</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="NmC" required>
+                                            <option disabled="disabled" value="" selected="selected">NmC</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="NmW" required>
+                                            <option disabled="disabled" value="" selected="selected">NmW</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="alive" required>
+                                    <option disabled="disabled" value="" selected="selected">Alive/Dead</option>
+                                    <option>Alive</option>
+                                    <option>Dead</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="p-t-20">
+                            <button id= "num" class="btn btn--radius btn--green" type="submit">View Result</button>
+                        </div>
+                    </form>
+
+                    <div class="result" align="center">
+                        {% if result %}
+                                <br>
+                                <br> Result: <br>
+                                <br><h4 class="title" >There is a {{ percent }}% probability that there is {{ result }} meningitis outbreak in this location</h4>
+                                {{fig_chart2}}
+                                {{choro_chart2}}
+                                <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>State</th>
+                                        <th>Percent Probability</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for i in range(0,length) %}
+                                    <tr>
+                                        <td>{{ test_prediction[i][2] }}</td>
+                                        <td>{{ test_prediction[i][0] }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+                        {% endif %}
+
+                        <!-- <div class="p-t-20">
+                            <a href="{{ url_for ('plotly')}}"><button class="btn btn--radius btn--green" type="submit" >View Map1</button></a>
+                        </div>
+    
+                        <div class="p-t-20">
+                            <a href="{{ url_for ('plotly2')}}"><button class="btn btn--radius btn--green" type="submit" >View Map2</button></a>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/button.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/datepicker/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/datepicker/daterangepicker.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/button.js') }}"></script>
+    <!-- Jquery JS-->
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
