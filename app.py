@@ -3,9 +3,6 @@ import numpy as np
 import requests
 import json
 import pandas as pd
-import plotly.express as px
-from flask import Markup
-import plotly.offline as po
 
 
 app=flask.Flask(__name__,template_folder='templates')
@@ -159,17 +156,8 @@ def main():
         df['predicted']=df['predicted'].map({1: 'Yes', 0: 'No'})
         print(df)
 
-        fig=px.choropleth(df,locations='id',geojson=states,color='prediction',hover_name='State',color_continuous_scale=px.colors.diverging.BrBG,color_continuous_midpoint=0.5,labels={'prediction_int':'prediction_int'})
-        fig.update_geos(fitbounds="locations", visible=False) 
-        #fig=fig.write_html("templates/plotly.html")
-        fig_chart=po.plot(fig,output_type='div',include_plotlyjs=True)
-        fig_chart1=Markup(fig_chart)
-
-        choro2=px.choropleth_mapbox(df,locations='id',geojson=states,color='predicted',hover_name='State',mapbox_style='carto-positron',center={'lat':9.0820,'lon':8.6753},zoom=4,color_continuous_scale=[['No','green'],['Yes','red']],opacity=0.8,title='Locations of Meningitis in Nigeria')
-        #choro2=choro2.write_html('templates/plotly2.html')
-        choro_chart=po.plot(choro2,output_type='div',include_plotlyjs=True)
-        choro_chart1=Markup(choro_chart)
-        return flask.render_template('main.html',percent=percent,result=prediction,fig_chart2=fig_chart1,choro_chart2=choro_chart1,test_prediction=sorted(test_prediction),length=length)
+       
+        return flask.render_template('main.html',percent=percent,result=prediction,test_prediction=sorted(test_prediction),length=length)
 
 @app.route('/map1/')
 def plotly():
