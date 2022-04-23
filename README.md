@@ -1,2 +1,3 @@
 # choropleth
-Optional
+
+Embedding choropleth maps in html
